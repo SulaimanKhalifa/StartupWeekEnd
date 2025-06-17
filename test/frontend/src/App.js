@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-
+import {Grid} from '@mantine/core'
 function MyButton() {
   const [count, setCount] = useState(0);
   function handleClick() {
@@ -39,12 +39,29 @@ function Clock({ defaultSec = 0 }) {
   );
 }
 
+function Slides(){
+  return(
+  <iframe width={1000} height={1000}
+    src="https://www.canva.com/design/DAGaNC7ccA8/La7KRTx6F5HzwQPcvE1c7A/view?embed" >
+  </iframe>
+
+)}
+
+function Dashboard() {
+  return (
+    <Grid rows={1}>
+      <Grid.Col w = {10}  span={4}>1</Grid.Col>
+      <Grid.Col w = {10} span={4}>2</Grid.Col>
+      <Grid.Col w = {10} span={4}>3</Grid.Col>
+    </Grid>
+  );}
+
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <MyButton/> */}
-        <Clock />
+        <Dashboard/>
       </header>
     </div>
   );
